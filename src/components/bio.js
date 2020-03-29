@@ -57,7 +57,7 @@ const Bio = () => {
         Written by <a href='https://karankiri.com'><strong>{author}</strong></a> who lives and works in Mumbai, building useful things.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          You could get in touch with me via twitter.
         </a>
       </p>
     </div>
