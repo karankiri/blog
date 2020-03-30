@@ -75,6 +75,14 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
+        <form method="POST" action="https://dev.staticman.net/v3/entry/karankiri/blog/master/comments">
+          <input name="options[redirect]" type="hidden" value="https://blog.karankiri.com" />
+          <label><input name="fields[name]" type="text"/>Name</label>
+          <label><input name="fields[email]" type="email"/>E-mail</label>
+          <label><textarea name="fields[message]"></textarea>Message</label>
+          
+          <button type="submit">Go!</button>
+        </form>
       </Layout>
     )
   }
