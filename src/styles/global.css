@@ -1,0 +1,31 @@
+body {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: #007acc;
+  --hr: hsla(0, 0%, 0%, 0.2);
+  background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --bg: #2d2d2d;
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: white;
+  --textLink: #007acc;
+  --hr: hsla(0, 0%, 100%, 0.2);
+}
+
+body.dark .gist .blob-code-inner, body.dark .gist .blob-num{
+  background-color: var(--bg);
+  color: var(--textNormal);
+}
+
+body.dark .gist .gist-meta{
+  background-color: var(--bg);
+  color: var(--textNormal);
+}
+
+body.dark .gist .gist-meta a{
+  color: var(--textLink);
+}

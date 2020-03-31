@@ -38,6 +38,8 @@ const Bio = () => {
       style={{
         display: `flex`,
         marginBottom: rhythm(2.5),
+        backgroundColor: 'var(--bg)',
+        color: 'var(--textNormal)',
       }}
     >
       <Image
@@ -54,11 +56,9 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <a href='https://karankiri.com'><strong>{author}</strong></a> who lives and works in Mumbai, building useful things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You could get in touch with me via twitter.
-        </a>
+        Personal blog by <a href='https://karankiri.com'><strong>{author}</strong></a>
+        <br />
+        You could get in touch with me via <a href={`https://twitter.com/${social.twitter}`}>twitter</a>
       </p>
     </div>
   )

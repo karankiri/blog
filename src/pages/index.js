@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import "../styles/global.css"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,13 +13,19 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} style={{
+        backgroundColor: 'var(--bg)',
+        color: 'var(--textNormal)',
+      }}>
         <SEO title="All posts" />
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
+            <article key={node.fields.slug} style={{
+              backgroundColor: 'var(--bg)',
+              color: 'var(--textNormal)',
+            }}>
               <header>
                 <h3
                   style={{
