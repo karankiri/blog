@@ -29,3 +29,25 @@ body.dark .gist .gist-meta{
 body.dark .gist .gist-meta a{
   color: var(--textLink);
 }
+
+header{
+  position: relative;
+}
+
+button.dark-switcher {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  display: flex;
+  width: 50px;
+  background: none;
+  border: none;
+  height: 50px;
+  outline: none;
+}
+
+button.dark-switcher img {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}

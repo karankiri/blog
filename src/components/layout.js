@@ -62,8 +62,10 @@ class Layout extends React.Component {
           color: 'var(--textNormal)',
         }}
       >
-        <header>{header}</header>
-        <ThemeSwitcher />
+        <header>
+          {header}
+          <ThemeSwitcher />
+        </header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
