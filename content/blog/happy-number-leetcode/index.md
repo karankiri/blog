@@ -25,7 +25,7 @@ Give it a try.
 
 If you really wanna see the solution scroll down.
 
-### Solution
+### Solution 1
 
 We can solve this proble by brute force. We'll keep computing the square and see where it leads.
 After repeting this for few time you'll notice that either we'll reach 1 or we'll keep repeating the cycle.
@@ -49,6 +49,37 @@ class Solution:
         n = currentSq
       return is_happy
      
+def digitSqaures(n:int) -> int:
+    sum = 0
+    while n > 0:
+        remainder = n % 10
+        sum = sum + remainder * remainder
+        n = int(n / 10)
+    return sum
+```
+
+### Solution 2
+In this approach we'll use the Floyd's algorithm for checking if there's any cycle in the list we're following.
+If you don't know about Floyd's algorithm, please check this awesome [video tutorial](https://www.youtube.com/watch?v=-YiQZi3mLq0) by Gaurav Sen.
+
+Basically we'll follow two pointer one fast and slow. If both reached the same node then we can say that there's cycle and we can return false. If we reach 1 then we'll return true.
+
+Here is the solution.
+
+```python
+class Solution:
+    def isHappy(self, n: int) -> bool:
+      is_happy = n == 1
+      fastSq = digitSqaures(n)
+
+      while n!= 1 and fastSq != n:
+        n = digitSqaures(n)
+        fastSq = digitSqaures(digitSqaures(fastSq))
+        if(n==1):
+          is_happy = True
+          break
+      return is_happy
+               
 def digitSqaures(n:int) -> int:
     sum = 0
     while n > 0:
